@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
   html {
     font-family: "Manrope", serif;
   }
@@ -71,5 +75,57 @@
     line-height: 25px;
     letter-spacing: 1px;
     color: #D87D4A;
+  }
+
+  .burger-menu {
+    position: relative;
+    width: 16px;
+    height: 3px;
+    padding: 8px;
+    background-image: url('./assets/icons/burger-stick-icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .burger-menu::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    height: 3px;
+    background-color: white;
+    top: 0;
+  }
+
+  .burger-menu::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    height: 3px;
+    background-color: white;
+    bottom: 0;
+  }
+
+  .cart-icon {
+    height: 20px;
+    width: 23px;
+    background-image: url('./assets/shared/desktop/icon-cart.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .flex-column-center {
+    @apply flex flex-col justify-center items-center;
+  }
+
+  .orange-line {
+    position: absolute;
+    width: 101px;
+    height: 4px;
+    background-color: #D87D4A;
+    top: 0;
   }
 }
