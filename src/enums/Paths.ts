@@ -3,4 +3,5 @@ export enum Paths {
   HEADPHONES = '/headphones',
   SPEAKERS = '/speakers',
   EARPHONES = '/earphones',
+  NOT_FOUND_PAGE = '*',
 }
